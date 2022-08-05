@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  background: var(--very-light-gray);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+h1,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.cards {
+  max-width: 920px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-radius: 0.8rem;
+  overflow: hidden;
+  margin:10px;
+}
+
+.card {
+  box-sizing: border-box;
+  padding: 3rem;
+  display: grid;
+}
+
+.card img {
+  margin-bottom: 2rem;
+}
+
+.card-title {
+  font-family: "Big Shoulders Display", cursive;
+  font-weight: 700;
+  color: var(--very-light-gray);
+  margin-bottom: 2rem;
+}
+
+.card-text {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  color: var(--transparent-white);
+  margin-bottom: 5.2rem;
+  line-height: 1.8;
+}
+
+
+.card:nth-child(1) {
+  background-color: var(--bright-orange);
+}
+.card:nth-child(2) {
+  background-color: var(--dark-cyan);
+}
+.card:nth-child(3) {
+  background-color: var(--very-dark-cyan);
+}
+
+.card:nth-child(1) a {
+  color: var(--bright-orange);
+}
+.card:nth-child(2) a {
+  color: var(--dark-cyan);
+}
+.card:nth-child(3) a {
+  color: var(--very-dark-cyan);
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--very-light-gray);
+  padding: .8rem 2rem;
+  border-radius: 30px;
+  border: 2px solid var(--very-light-gray);
+  place-self: end start;
+}
+
+.card .btn:hover {
+  color: var(--very-light-gray);
+  background: transparent;
+}
+
+@media (max-width:450px){
+  .cards{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 
+font-family: 'Big Shoulders Display', cursive;
+font-family: 'Lexend Deca', sans-serif;
+*/
